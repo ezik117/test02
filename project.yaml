@@ -1,0 +1,7 @@
+homepage: "https://github.com/ezik117/test02"
+language: c
+primary_contact: "andrei"
+main_repo: "https://github.com/ezik117/test02"
+file_github_issue: true
+auto_ccs:
+- 
