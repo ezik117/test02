@@ -4,20 +4,33 @@
 
 #include "test.h"
 
-int func(int a)
+// void func(int a)
+// {
+//     FILE *fptr;
+//     if ((fptr = fopen("tdata.bin","ab")) != NULL)
+//     {
+//         fprintf(fptr, "a=%d", a);
+//         fclose(fptr);
+//     }
+// }
+
+void func(int a)
 {
-    FILE *fptr;
-    if ((fptr = fopen("tdata.bin","ab")) != NULL)
-    {
-        fwrite(&a, 1, 1, fptr);
-        fclose(fptr);
+    void* m1;
+    void* m2;
+    switch (a) {
+        case 0:
+            m1 = malloc(a);
+            // do something here, for example send data through socket
+            free(m1);
+            break;
+        case 1:
+            m2 = malloc(a + 1);
+            // another action, let's say saving the file
+            free(m2);
+            break;
+        
+        default:
+            break;
     }
-
-    if (a == 0x00)
-        return 0;
-    else if (a == 0x20)
-        return 1;
-
-    printf("last line is reached!");
-    return 2;
 }

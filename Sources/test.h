@@ -1,6 +1,6 @@
 #ifndef TEST_H
 #define TEST_H
 
-int func(int a);
+void func(int a);
 
 #endif
